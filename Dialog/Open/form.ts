@@ -2,7 +2,12 @@ import { parse } from "path";
 import { IInputs } from "../generated/ManifestTypes";
 import { TCallback } from "./dialog";
 
-
+function clearId(id: string | null ){
+    if(id==""){
+        return null;
+    }
+    return id;
+}
 
 export function openForm(context: ComponentFramework.Context<IInputs>, callback: TCallback){
     const entityName = context.parameters.entityName.raw;
@@ -13,7 +18,7 @@ export function openForm(context: ComponentFramework.Context<IInputs>, callback:
 
     (context.navigation as any).navigateTo({
         pageType: "entityrecord",
-        recordId: entityId,
+        entityId: clearId(entityId),
         entityName: entityName ?? ""
     }, {
         width: { value : parseInt(width), unit: "px"},
