@@ -2,7 +2,7 @@ import { parse } from "path";
 import { IInputs } from "../generated/ManifestTypes";
 import { TCallback } from "./dialog";
 
-function clearId(id: string | null ){
+function removeEmptyString(id: string | null ){
     if(id==""){
         return null;
     }
@@ -16,10 +16,26 @@ export function openForm(context: ComponentFramework.Context<IInputs>, callback:
     const height = context.parameters.height.raw ?? "500";
     const position = context.parameters.position.raw ?? "Center";
 
+    const dataString = removeEmptyString(context.parameters.data?.raw);
+    let dataParam = {};    
+    try{
+        if(dataString != null){
+            dataParam = {data: JSON.parse(dataString ?? "{}")};
+        }
+    }
+    catch(e){
+        console.error(e);
+    }
+    const formIdString = removeEmptyString(context.parameters.formId.raw);
+    const tabNameString = removeEmptyString(context.parameters.formTabName.raw);
+    const formIdParam = formIdString != null ? {formId: formIdString} : {};
+    const tabNameParam = tabNameString != null ? {tabName: tabNameString} : {};
+
     (context.navigation as any).navigateTo({
         pageType: "entityrecord",
-        entityId: clearId(entityId),
-        entityName: entityName ?? ""
+        entityId: removeEmptyString(entityId),
+        entityName: entityName ?? "", 
+        ...dataParam, ...formIdParam, ...tabNameParam
     }, {
         width: { value : parseInt(width), unit: "px"},
         height: {value: parseInt(height), unit: "px"}, 

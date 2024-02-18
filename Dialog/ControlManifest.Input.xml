@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="Dianamics" constructor="Dialog" version="0.0.11" display-name-key="Dialog" description-key="Dialog description" control-type="virtual" >   
+  <control namespace="Dianamics" constructor="Dialog" version="0.0.14" display-name-key="Dialog" description-key="Dialog description" control-type="virtual" >   
     <external-service-usage enabled="false">
       <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
       <domain></domain>
@@ -45,6 +45,9 @@
       <value name="Center" display-name-key="Center" description-key="Center" default="true">Center</value>
       <value name="Side" display-name-key="Side" description-key="Side">Side</value>      
     </property>
+    <property name="data" display-name-key="Data_JSON_as_string" description-key="Data_JSON_as_string" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="formId" display-name-key="formId" description-key="formId" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="formTabName" display-name-key="formTabName" description-key="formTabName" of-type="SingleLine.Text" usage="input" required="false" />
 
      <property name="pageName" display-name-key="pageName" description-key="pageName" of-type="SingleLine.Text" usage="input" required="false" />
 

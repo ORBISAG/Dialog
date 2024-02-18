@@ -41,7 +41,7 @@ export class Dialog implements ComponentFramework.ReactControl<IInputs, IOutputs
     }
 
     private openDialog(context:ComponentFramework.Context<IInputs>, callback: TCallback){
-        console.log("Open Dialog now");
+        console.log("Open Dialog now", context);
         if(context.parameters.type.raw === "Form"){
             openForm(context, callback);
         }
@@ -73,6 +73,7 @@ export class Dialog implements ComponentFramework.ReactControl<IInputs, IOutputs
      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
      */
     public getOutputs(): IOutputs {
+        console.log("---passing result---", this.result);
         return { 
             result: this.result
         };
