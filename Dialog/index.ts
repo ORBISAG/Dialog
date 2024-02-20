@@ -57,7 +57,7 @@ export class Dialog implements ComponentFramework.ReactControl<IInputs, IOutputs
      * @returns ReactElement root react element for the control
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        if(this.trigger !== context.parameters.dialogTrigger.raw){                       
+        if(this.trigger !== context.parameters.dialogTrigger.raw && context.parameters.dialogTrigger.raw!=null && context.parameters.dialogTrigger.raw!=""){                       
             this.trigger = context.parameters.dialogTrigger.raw;
             if(context.updatedProperties.includes("dialogTrigger")){
                 this.openDialog(context, this.afterClose.bind(this));               
