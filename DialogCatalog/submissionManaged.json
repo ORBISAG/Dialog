@@ -6,8 +6,8 @@
       "publisherDisplayName": "ORBIS"
     },
     "catalogItemDefinition": {
-      "id": "ORBISDialogPCF",
-      "displayName": "ORBIS Dialog solution",
+      "id": "ORBISDialogPCF_ManagedSolution",
+      "displayName": "ORBIS Dialog Managed solution",
       "description": "A solution to open a dialog from a custom Page",    
       "offer": {
         "type": "Component_Collection",      
