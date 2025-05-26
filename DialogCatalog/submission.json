@@ -15,10 +15,18 @@
         "sourceCodeRepositoryLink": "https://github.com/ORBISAG/Dialog",
         "helpLink": "https://github.com/ORBISAG/Dialog",
         "deploymentType": "Normal",
+         "large216x216Image": {
+                "name": "Large216image2",
+                "fileSasLink": "https://github.com/ORBISAG/Dialog/blob/main/Docs/icon216.jpg"
+        },
+         "small48x48Image": {
+            "name": "Small48Image",
+            "fileSasLink": "https://github.com/ORBISAG/Dialog/blob/main/Docs/icon48.jpg"      
+        },
         "screenshots": [
           {
-            "url": "https://github.com/ORBISAG/Dialog//Docs/image.png",
-            "description": "Dialog PCF in action (dummy image)"
+            "fileSasLink": "https://github.com/ORBISAG/Dialog/blob/main/Docs/image.png",
+            "name": "image.png"
           }
         ],
         "engineeringName": {
