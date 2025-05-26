@@ -1,0 +1,37 @@
+{
+    "modelVersion": "1.0.0.0",   
+    "operation": "CreateOrUpdate",    
+    "publisherDetails": {
+      "publisherId": "879a5326-493a-f011-b4cb-6045bd98b9ac",
+      "publisherDisplayName": "ORBIS"
+    },
+    "catalogItemDefinition": {
+      "id": "ORBISDialogPCF",
+      "displayName": "ORBIS Dialog solution",
+      "description": "A solution to open a dialog from a custom Page",    
+      "offer": {
+        "type": "Component_Collection",
+        "supportsApplicationTypes": ["CanvasApps", "ModelApps"],
+        "sourceCodeRepositoryLink": "https://github.com/ORBISAG/Dialog",
+        "helpLink": "https://github.com/ORBISAG/Dialog",
+        "deploymentType": "Normal",
+        "screenshots": [
+          {
+            "url": "https://github.com/ORBISAG/Dialog//Docs/image.png",
+            "description": "Dialog PCF in action (dummy image)"
+          }
+        ],
+        "engineeringName": {
+          "firstName": "Diana",
+          "lastName": "Birkelbach",
+          "email": "diana.birkelbach@orbis.de"        
+        },
+        "supportName": {
+          "firstName": "Diana",
+          "lastName": "Birkelbach",
+          "email": "diana.birkelbach@orbis.de"
+        }
+      }
+    }
+  }
+  
